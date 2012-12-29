@@ -10,14 +10,21 @@
 	<!-- 00AEEF <- KOLOR!-->
 	<div id="ceiling"></div>
 	<div id="menu">
-		<input type="submit" class="inside-menu-button" id="strona-glowna" value="strona glowna" /><br/>
-		<input type="submit" class="inside-menu-button" id="" value="podstrona jeden" /><br/>
-		<input type="submit" class="inside-menu-button" id="" value="podstrona dwa" /><br/>
-		<input type="submit" class="inside-menu-button" id="" value="podstrona trzy" /><br/>
+		<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform1'))" value="strona glowna" /><br/>
+		<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform2'))" value="podstrona jeden" /><br/>
+		<input type="button" class="inside-menu-button" value="podstrona dwa" /><br/>
+		<input type="button" class="inside-menu-button" value="podstrona trzy" /><br/>
 	</div>
-	<div id="platform1">
+	<div id="platform1" class="subpage">
 		<div id="header">Witojcie!</div>
 		<div id="szczegoly">eee to tutaj bedzie ciut szczegolikow</div>
+		<div id="delimeter"></div>
+		<input type="submit" id="menu-button" value="Menu" />
+		<div id="dalsze">Np autor itp, czesc textu na magiczny kolor ;]</div>
+	</div>
+	<div id="platform2" class="subpage">
+		<div id="header">SUBPAGE2</div>
+		<div id="szczegoly">suuuuuuuuuuuuuuuuuuuabppppaaaaaage2</div>
 		<div id="delimeter"></div>
 		<input type="submit" id="menu-button" value="Menu" />
 		<div id="dalsze">Np autor itp, czesc textu na magiczny kolor ;]</div>
