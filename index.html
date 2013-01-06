@@ -4,6 +4,7 @@
 	<LINK REL=StyleSheet HREF="./styles.css" TYPE="text/css">
 	<script type="text/javascript" src="../jquery.js"></script>
 	<script type="text/javascript" src="menu-script.js"></script>
+	<script type="text/javascript" src="games/paper,rock,scissors.js"></script>
 </head>
 
 <body>
@@ -11,7 +12,7 @@
 	<div id="ceiling"></div>
 	<div id="menu">
 		<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform1'))" value="strona glowna" /><br/>
-		<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform2'))" value="podstrona jeden" /><br/>
+		<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform2'))" value="gra1 " /><br/>
 		<input type="button" class="inside-menu-button" value="podstrona dwa" /><br/>
 		<input type="button" class="inside-menu-button" value="podstrona trzy" /><br/>
 	</div>
@@ -24,10 +25,13 @@
 	</div>
 	<div id="platform2" class="subpage">
 		<div id="header">SUBPAGE2</div>
-		<div id="szczegoly">suuuuuuuuuuuuuuuuuuuabppppaaaaaage2</div>
-		<div id="delimeter"></div>
-		<input type="submit" id="menu-button" value="Menu" />
-		<div id="dalsze">Np autor itp, czesc textu na magiczny kolor ;]</div>
+		<input type="button" class="game_button" id="paper,rock,scissors button" onclick="game_loop()" value="Paper,Rock and scissors!">
+		<div id="comments">user's choice: </br></br>computer's choice: </br></br>result: </div>
+		<div id="results">
+			<div id="prs_user_choice" class="text_output"></div>
+			<div id="prs_computer_choice" class="text_output"></div>
+			<div id="prs_result_output" class="text_output"></div>
+		</div>
 	</div>
 </body>
 

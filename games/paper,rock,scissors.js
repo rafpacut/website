@@ -19,44 +19,52 @@ function compute_cc()
 function get_uc()
 {
 	temp_uc = '.';
-	while( temp_uc != "kamien" || temp_uc != "papier" || temp_uc != "nozyce" )
+	while( temp_uc != "kamien" && temp_uc != "papier" && temp_uc != "nozyce" )
 	{
-		temp_uc = prompt( "Wybierz kamien, papier lub nozyce" );
+		temp_uc = prompt("Wybierz kamien, papier lub nozyce");
 	}
 	return temp_uc;
 }
 
 function compare( choice1, choice2 )
 {
-	if( choice1 == "kamien" )
+	if( choice1 == choice2 )
 	{
-		if( choice2 == "papier" )
-			return "papier wygrywa";
-		else
-			return "kamien wygrywa";
+		return "remis";
 	}
-	if( choice1 == "papier" )
+	else
 	{
-		if( choice2 == "kamien" )
-			return "papier wygrywa";
-		else
-			return "nozyce wygrywaja";
-	}
-	if( choice1 == "nozyce" )
-	{
-		if( choice2 == "kamien" )
-			return "kamien wygrywa";
-		else
-			return "nozyce wygrywaja";
+		if( choice1 == "kamien" )
+		{
+			if( choice2 == "papier" )
+				return "papier wygrywa";
+			else
+				return "kamien wygrywa";
+		}
+		if( choice1 == "papier" )
+		{
+			if( choice2 == "kamien" )
+				return "papier wygrywa";
+			else
+				return "nozyce wygrywaja";
+		}
+		if( choice1 == "nozyce" )
+		{
+			if( choice2 == "kamien" )
+				return "kamien wygrywa";
+			else
+				return "nozyce wygrywaja";
+		}
 	}
 }
 
 function game_loop()
 {
-	// opcja zeby grac na 2ch
+	$(".text_output").hide();
 	uc = get_uc();
-	cc = computer_cc();
-	var result =	compare(uc, cc);
-	alert(result);
-	$("#asdf").text(123);
+	$("#prs_user_choice").text(uc).show();
+	cc = compute_cc();
+	$("#prs_computer_choice").html(cc).fadeIn(2000);
+	var result = compare(uc, cc);
+	$("#prs_result_output").text(result).fadeIn(2000);
 }
