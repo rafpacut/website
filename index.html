@@ -17,21 +17,26 @@
 		<input type="button" class="inside-menu-button" value="podstrona trzy" /><br/>
 	</div>
 	<div id="platform1" class="subpage">
-		<div id="header">Witojcie!</div>
+		<div class="header">Witojcie!</div>
 		<div id="szczegoly">eee to tutaj bedzie ciut szczegolikow</div>
 		<div id="delimeter"></div>
 		<input type="submit" id="menu-button" value="Menu" />
 		<div id="dalsze">Np autor itp, czesc textu na magiczny kolor ;]</div>
 	</div>
 	<div id="platform2" class="subpage">
-		<div id="header">SUBPAGE2</div>
-		<input type="button" class="game_button" id="paper,rock,scissors button" onclick="game_loop()" value="Paper,Rock and scissors!">
+		<div class="header">SUBPAGE2</div>
+		<input type="button" class="game_button" id="paper,rock,scissors button" onclick="prs_game_loop()" value="Paper,Rock and scissors!">
 		<div id="comments">user's choice: </br></br>computer's choice: </br></br>result: </div>
 		<div id="results">
 			<div id="prs_user_choice" class="text_output"></div>
 			<div id="prs_computer_choice" class="text_output"></div>
 			<div id="prs_result_output" class="text_output"></div>
 		</div>
+	</div>
+	<div id="platform3" class="subpage">
+		<div class="header">SUBPAGE3</div>
+		<div id="atoms_board"></div>
+		<input type="button"class="game_button" id="atoms_button" onclick="atoms_Init()">
 	</div>
 </body>
 

@@ -58,7 +58,7 @@ function compare( choice1, choice2 )
 	}
 }
 
-function game_loop()
+function prs_game_loop()
 {
 	$(".text_output").hide();
 	uc = get_uc();
