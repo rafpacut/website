@@ -1,60 +1,13 @@
-var player = 0;
-
-function get_the_actual_number_of_circles(i, j)
+function determine_the_changes( i, j )
 {
-	var max_number = 0;
-	var actual_number = plansza[i][j];
-	if( plansza[i][j-1] > 0 || plansza[i][j-1] < 6)//jeden w lewo
-	{
-		max_number += 1;
-		acutal_number += 1;
-	}
-	if( plansza[i][j+1] > 0 || plansza[i][j+1] < 6 )// jeden w prawo
-	{
-		max_number += 1;
-		acutal_number += 1;
-	}
-	if( plansza[i-1][j] > 0 || plansza[i-1][j] < 6 )//jeden w dol
-	{
-		max_number += 1;
-		acutal_number += 1;
-	}
-	if( plansza[i+1][j] > 0 || plansza[i+1][j] < 6 )//jeden w gore
-	{
-		max_number += 1;
-		acutal_number += 1;
-	}
 	
 }
 
-
-function determine_the_changes( i, j )
+function OnClick( element, i, j )
 {
-	if( player )
-	{
-		//czerwony
-		image_color="red";
-		//get the max number of circles, and actual number of circles:
-		get_the_actual_number_of_circles(i, j);
-	}
-	else
-	{
-		//zielony
-		image_color="greem";
-	}
+	determine_the_changes( i, j );
+    $(element).attr('src','games/graphics/atoms/red1.jpg');
 }
-
-function OnClick( i, j )
-{
-	if( plansza[i][j] == 0 || plansza[i][j] == player) // Jezeli mozliwe jest zrobienie ruchu.(mozliwe ze trzeba bedzie dodac, jezeli nie wybuchaja).
-	{
-		determine_the_changes( i, j );
-			
-		$("input[name=image"+i+"_"+j+"]")
-	}
-}
-
-
 
 function atoms_Init()
 {
@@ -70,7 +23,7 @@ function atoms_Init()
 			if( i == 0 || j == 0 )
 				plansza[i][j] = -1;
 			plansza[i][j] = 0;
-			table_string += "<td><img name=image"+i+"_"+j+" src=games/graphics/atoms/blank.jpg onclick='OnClick("+i+","+j+")'></td>";
+			table_string += "<td><img name=image"+i+"_"+j+" src=games/graphics/atoms/blank.jpg onclick=OnClick(this,"+i+","+j+")></td>";
 		}
 		table_string+="</tr>";
 	}
