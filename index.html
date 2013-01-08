@@ -5,6 +5,7 @@
 	<script type="text/javascript" src="../jquery.js"></script>
 	<script type="text/javascript" src="menu-script.js"></script>
 	<script type="text/javascript" src="games/paper,rock,scissors.js"></script>
+	<script type="text/javascript" src="games/atoms.js"></script>
 </head>
 
 <body>
@@ -12,8 +13,8 @@
 	<div id="ceiling"></div>
 	<div id="menu">
 		<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform1'))" value="strona glowna" /><br/>
-		<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform2'))" value="gra1 " /><br/>
-		<input type="button" class="inside-menu-button" value="podstrona dwa" /><br/>
+		<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform2'))" value="prs " /><br/>
+		<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform3'))" value="atoms"/><br/>
 		<input type="button" class="inside-menu-button" value="podstrona trzy" /><br/>
 	</div>
 	<div id="platform1" class="subpage">
@@ -36,7 +37,7 @@
 	<div id="platform3" class="subpage">
 		<div class="header">SUBPAGE3</div>
 		<div id="atoms_board"></div>
-		<input type="button"class="game_button" id="atoms_button" onclick="atoms_Init()">
+		<input type="button"class="game_button" id="atoms_button" onclick="atoms_Init()" value="atoms!">
 	</div>
 </body>
 
