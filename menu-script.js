@@ -13,3 +13,10 @@ function change_subpage(jqueryObject)
 	$(".subpage").hide();
 	jqueryObject.show();
 }
+
+function show_about( jqueryObject )
+{
+	$(jqueryObject).toggle();
+	$("#comments").toggle();
+	$("#results").toggle();
+}

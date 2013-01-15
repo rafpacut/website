@@ -1,3 +1,4 @@
+//przetestuj koniec
 function compute_cc()
 {
 	var temp_cc = Math.random();
@@ -19,9 +20,9 @@ function compute_cc()
 function get_uc()
 {
 	temp_uc = '.';
-	while( temp_uc != "kamien" && temp_uc != "papier" && temp_uc != "nozyce" )
+	while( temp_uc != "kamien" && temp_uc != "papier" && temp_uc != "nozyce" && temp_uc != "koniec")
 	{
-		temp_uc = prompt("Wybierz kamien, papier lub nozyce");
+		temp_uc = prompt("Wybierz kamien, papier lub nozyce. Wybierz koniec by wyjsc.");
 	}
 	return temp_uc;
 }
@@ -62,9 +63,12 @@ function prs_game_loop()
 {
 	$(".text_output").hide();
 	uc = get_uc();
-	$("#prs_user_choice").text(uc).show();
-	cc = compute_cc();
-	$("#prs_computer_choice").html(cc).fadeIn(2000);
-	var result = compare(uc, cc);
-	$("#prs_result_output").text(result).fadeIn(2000);
+	if( uc != "koniec" )
+	{
+		$("#prs_user_choice").text(uc).show();
+		cc = compute_cc();
+		$("#prs_computer_choice").html(cc).fadeIn(2000);
+		var result = compare(uc, cc);
+		$("#prs_result_output").text(result).fadeIn(2000);
+	}
 }
