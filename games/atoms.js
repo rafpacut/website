@@ -95,12 +95,14 @@ function change_img( x, y )
 		plansza[x][y] = number_of_circles + player;
 		if( red_il == 0 && green_il > 1 )
 		{
-			alert( "zielony wygral!" );
+//			alert( "zielony wygral!" );
+			$("#atoms_results").text("zielony wygral!");
 			running = false;
 		}
 		if( green_il == 0 && red_il > 1 )
 		{
-			alert( "czerwony wygral!" );
+//			alert( "czerwony wygral!" );
+			$("#atoms_results").text("czerwony wygral!");
 			running = false;
 		}
 	}
