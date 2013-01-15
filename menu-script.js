@@ -17,6 +17,6 @@ function change_subpage(jqueryObject)
 function show_about( jqueryObject )
 {
 	$(jqueryObject).toggle();
-	$("#comments").toggle();
-	$("#results").toggle();
+	$(".game1").toggle();
+	$(".game2").toggle();
 }
