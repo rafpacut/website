@@ -2,7 +2,7 @@ $(function()
 {
 	$("#menu-button").click(function()
 	{
-		$("#menu").fadeIn(1000);
+		$("#menu_background").fadeIn(1000);
 	});
 	
 	change_subpage($("#platform1"));

@@ -151,7 +151,7 @@ function OnClick( object, x, y )
 function atoms_Init()
 {
 	$("#atoms_board").text(".");//Ma pozwolic na rozpoczecie gry jeszcze raz.
-	
+	$("#atoms_results").text(".");
 	player='r';
 	green_il = 0;
 	red_il = 0;
@@ -159,7 +159,7 @@ function atoms_Init()
 	
 	plansza = new Array();
 	dl_boku = 8;
-	table_string = "<center><table border=1>";
+	table_string = "<center><table border=0.5>";
 	for( i = 0 ; i <= (dl_boku+1) ; i++ )
 	{
 		plansza[i] = new Array();
@@ -178,4 +178,5 @@ function atoms_Init()
 	}
 	table_string+= "</table></center>";
 	$("#atoms_board").append(table_string);
+	$("atoms_board_background").toggle();
 }	
