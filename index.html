@@ -1,8 +1,10 @@
 <html>
 
 <head>
+	<meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
 	<LINK REL=StyleSheet HREF="./styles.css" TYPE="text/css">
-	<script type="text/javascript" src="jquery.js"></script>
+<!--	<script type="text/javascript" src="jquery.js"></script> -->
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="menu-script.js"></script>
 	<script type="text/javascript" src="games/paper,rock,scissors.js"></script>
 	<script type="text/javascript" src="games/atoms.js"></script>
@@ -15,7 +17,7 @@
 			<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform1'))" value="strona glowna" /><br/>
 			<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform2'))" value="prs " /><br/>
 			<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform3'))" value="atoms"/><br/>
-			<input type="button" class="inside-menu-button" value="podstrona trzy" /><br/>
+			<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform4'))"value="GMO" /><br/>
 		</div>
 	</div>
 	
@@ -33,10 +35,11 @@
 		<input type="button" class="open_about" onclick="show_about('#about_prs')" value="Wiecej  o...">
 		<input type="button" class="game_button" id="paper,rock,scissors button" onclick="prs_game_loop()" value="Graj!">
 		<div class="about" id="about_prs">
-			About PRS
+			Kamień, papier, nożyce – skomplikowana i czasochłonna gra towarzyska, opierająca się na przeciwwadze trzech żywiołów. W dzisiejszych czasach gra jest najczęściej stosowana do: rozstrzygania wyników spotkań sportowych, wybierania prezydenta.<br/>
+			Istnieje uproszczona wersja tej gry, w której używa się tylko kamienia. Najczęściej gra się w to drużynowo na trybunach podczas meczów piłkarskich. Wówczas jedna z drużyn to policja, a druga – kibole. Ta pierwsza często korzysta z nieregulaminowych cheatów, dzięki czemu ma do dyspozycji gesty typu pała, pistolet na gumowe naboje i gaz łzawiący. Inna jej odmiana jest używana do przyjmowania porodów przez lekarzy.
 		</div>
 		<div id="comments" class="game1">
-		user's choice: </br></br>computer's choice: </br></br>result: </div>
+			user's choice: </br></br>computer's choice: </br></br>result: </div>
 		<div id="results" class="game2">
 			<div id="prs_user_choice" class="text_output"></div>
 			<div id="prs_computer_choice" class="text_output"></div>
@@ -49,18 +52,214 @@
 		<div class="header">SUBPAGE3</div>
 		<input type="button" class="open_about" onclick="show_about('#about_atoms')" value="Wiecej  o...">
 		<div class="about" id="about_atoms">
-		somsin
+		Atomy to gra planszowa gdzie atomki innych graczy sa przejmowane w rezultacie 
+		eksplozji atomow ( rozszczepienia ) spowodowanej przekroczeniem krytycznej    
+		masy atomowej. Eksplozja moze wywolac reakcje lancuchowa w wyniku ktorej   
+		atomy moga zmieniac wlasciciela wiele razy podczas jednej tury.<br/> Gra rozpoczyna
+		sie z pusta plansza. Co ture gracz moze stworzyc atom o masie 1, lub zwiekszyc
+		mase innego swojego atomu o 1. Krytyczna masa atomu jest zalezna od ilosci    
+		otaczajacych atom pol. Po rozszczepieniu atom rozpada sie na atomki o masie   
+		rownej atomowi na ktory wpadl plus jeden. Gracz ktory przejmie wszystkie atomy
+		na planszy wygrywa.
 		</div>
 		<div id="atoms_board_background">
 		<div id="atoms_board" class="game1"></div>
 		</div>
-		<input type="button"class="game_button" id="atoms_button" onclick="atoms_Init()" value="atoms!">
+		<input type="button" class="game_button" id="atoms_button" onclick="atoms_Init()" value="atoms!">
 		<div id="atoms_results" class="game2"></div>
 	</div>
 	
+	<div id="platform4" class="subpage gmo">
+			W trwającym 2 lata doświadczeniu badano wpływ karmy zawierającej kukurydzę GMO2 na zdrowie szczurów. Stwierdzono, że śmiertelność samic karmionych 				GMO była 2 – 3 wyższa, niż samic karmionych tradycyjną karmą. Ponadto samice karmione GMO umierały wcześniej (w młodszym wieku) niż samice 				kontrolne. Podobne zjawisko obserwowano także w 3 grupach samców karmionych różnymi dawkami GMO.
+			<p id="list">
+			<br/>
+			Obserwowane skutki stosowania karmy GMO wykazywały zależność od płci i statusu hormonalnego zwierząt.
+			<br/>
+			U samic karmionych GMO występowało więcej przypadków guzów w gruczołach mlecznych i guzy te rozwijały się wcześniej niż w grupie kontrolnej.
+			<br/>
+			Drugim organem pod względem częstości obserwowanych patologii była przysadka mózgowa.
+			<br/>
+			U szczurów karmionych GMO, a także u szczurów, na których testowano domieszkę herbicydu Roundup w wodzie pitnej3, występowały zaburzenia równowagi 				hormonalnej w zakresie hormonów płciowych.
+			<br/>
+			U samców karmionych GMO przekrwienie wątroby i zmiany martwicze występowały 2,5 – 5,5 razy częściej niż u samców z grupy kontrolnej. Te patologie 				potwierdzono w badaniach z użyciem mikroskopu optycznego oraz w mikroskopii elektronowej.
+			<br/>
+			Obserwowano także wyższy odsetek (1,3 – 2,3 razy więcej) przypadków ciężkiej nefropatii nerkowej
+			<br/>
+			U samców karmionych GMO występowało 4 razy więcej dużych guzów nowotworowych niż u samców kontrolnych, zmiany te pojawiały się też znacznie 				wcześniej (nawet do 600 dni wcześniej).
+			<br/>
+			Wyniki analiz biochemicznych potwierdziły występowanie znacznego, chronicznego upośledzenia nerek u zwierząt obu płci, zarówno karmionych GMO jak i 				dodatkiem Roundupu (76% wszystkich odstępstw od normy dotyczyło parametrów pracy nerek).
+			<br/>
+			</p>
+			Opisane schorzenia można interpretować jako efekt zaburzeń hormonalnych wywołanych przez Roundup, a także jako skutek aktywności transgenu i 				wywołanych przez niego zmian w metabolizmie genetycznie zmodyfikowanej kukurydzy.
+			<input type="button" class="game_button gmo_button" onclick="change_subpage($('#platform5'))" value="Next">
+		</div>
+		<div id="platform5" class="subpage gmo">
+			Stanowisko Redakcji Food and Chemical Toxicology
+
+			Od chwili publikacji pracy Séraliniego redakcja i wydawca czasopisma Food and Chemical Toxicology otrzymali wiele sygnałów od członków społeczności 				naukowej.
+
+			W odpowiedzi na te komentarze redakcja i wydawca oświadczają, że artykuł Seraliniego przeszedł przez normalną, wyczerpującą procedurę recenzji 				naukowej. Artykuł został przyjęty do druku po przejściu przez obiektywny i anonimowy proces recenzji. Autorzy wnieśli do swojego manuskryptu serię 				poprawek zasugerowanych przez recenzentów i poprawiony tekst został zaakceptowany przez redakcję do druku w naszym czasopiśmie.
+
+			Redakcja zachęca krytyków do nadsyłania swoich opinii, które zostaną opublikowane razem z odpowiedzią prof. Seraliniego.
+
+			Czasopismo Food and Chemical Toxicology (tłum.: “Toksykologia Żywności i Środków Chemicznych”) publikuje badania w takiej dziedzinie, w której 				łatwo o kontrowersje i ostre opinie pojawiające się zarówno w świecie naukowym jak i poza nim. Zachowanie niezależności wydawniczej z jednej strony 				i gęstego sita recenzji –  z drugiej strony, jest w tej sytuacji kluczowe dla naszego czasopisma.
+			<input type="button" class="game_button gmo_button" onclick="change_subpage($('#platform6'))" value="Next">
+			<input type="button" class="game_button gmo_button2" onclick="change_subpage($('#platform4'))" value="Previous">
+		</div>
+		<div id="platform6" class="subpage gmo">
+			Odpowiedź Seraliniego. Answers to critics: Why there is a long term toxicity due to NK603 Roundup-tolerant genetically modified maize and to a 				Roundup herbicide
+
+			Nasze ostatnie badania nad toksycznością długotrwałego stosowania kukurydzy NK603 i Roundupu wywołały liczne pozytywne i negatywne komentarze. 				Dzięki takiej debacie nauka posuwa się do przodu. Oto nasza odpowiedź na krytyczne uwagi. Nasza praca to pierwsze tak szczegółowe badanie 				długoterminowych skutków diety GMO. Dla kukurydzy NK603 wykonano dotąd tylko badania 90-ciodniowe. Jest to również pierwsze długoterminowe badanie 				reakcji organizmu ssaków na mocno rozcieńczoną domieszkę herbicydu Roundup. W naszych badaniach użyliśmy herbicydu, a nie tylko jego substancji 			czynnej (glifosat). Roundup jest najlepiej sprzedającym się herbicydem na świecie, dlatego obecna debata toczy się na skrzyżowaniu nauki i biznesu. 				To wyjaśnia, dlaczego większość krytycznych uwag pod naszym adresem pochodzi od naukowców zajmujących się ochroną roślin, autorów patentów na GMO i 				firmy Monsanto, właściciela kukurydzy NK603 i herbicydu Roundup.
+			Musimy się jednak skupić na nauce. Nasz eksperyment miał na celu badanie naukowe, a nie zmiany w przepisach dotyczących zasad dopuszczenia badanych 				produktów do obrotu. Nasze badania powinny zostać powtórzone przez innych, co pozwoli ocenić, jaki jest rzeczywisty wpływ tych produktów na 				zdrowie. Nasz eksperyment miał pewne ograniczenia, jak każdy inny eksperyment. Dalej szczegółowo omawiamy sporne kwestie.
+			<input type="button" class="game_button gmo_button" onclick="change_subpage($('#platform7'))" value="Next">
+			<input type="button" class="game_button gmo_button2" onclick="change_subpage($('#platform5'))" value="Previous">
+		</div>
+		<div id="platform7" class="subpage gmo">
+		<table class="gmo_table">
+		<tr>
+			<td>
+				<strong>Zarzut</strong>
+			</p>
+			</td>
+			<td>
+				<strong>Odpowiedź autorów</strong>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				1) Nie ma wytycznych dla badań wpływu GMO na zwierzęta
+			<br/>
+				 2) Nasze doświadczenie wykonaliśmy w oparciu o protokoły OECD nr 408 i 452
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Protokół doświadczalny nieodpowiedni do badania powstawania nowotworów
+			</td>
+			<td>
+				Nasz eksperyment miał charakter długoterminowego badania toksykologicznego a nie dotyczył mechanizmów powstawania nowotworów
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Autorzy nie są toksykologami
+			<br/>
+				 Wcześniejsze prace tej grupy badawczej zostały “odrzucone”
+			</td>
+			<td>
+				Autorzy z grupy prof. Seraliniego mają na swoim koncie 26 artykułów naukowych opublikowanych w recenzowanych czasopismach w ciągu ostatnich 					5 lat. 11 artykułów opublikowano w czasopismach z zakresu toksykologii, dostępnych w bazie danych PubMed. Także M. Malatesta opublikowała 					liczne prace dotyczące wpływu GMO na zdrowie. Wszystkie prace otrzymały pozytywne recenzje naukowe, żadna nie została odrzucona przez 					redakcje czasopism naukowych. Agencje kontrolne ani firma Monsanto (które „odrzucają” wyniki naszych badań) to nie są redakcje naukowe.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				We wcześniejszych testach (90-cio dniowych) nie wykazano symptomów szkodliwości kukurydzy NK603
+			</td>
+			<td>
+				Wręcz przeciwnie – statystycznie znamienne różnice w biochemicznych parametrach pracy wątroby i nerek zauważyli zarówno przedstawiciele 				przemysłu biotechnologicznego (wykonujący badania bezpieczeństwa GMO) jak i agencje kontrolne (EFSA)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			To wcale nie jest jedyne/pierwsze długoterminowe badanie wpływu GMO na zdrowie
+			</td>
+			<td>
+				Nasze badanie jest pierwszym badaniem skutków chronicznej ekspozycji (2 lata to całe życie szczurów) na ten rodzaj kukurydzy GMO. Inne 					badania dotyczyły zwierząt gospodarskich, dla których 2 lata, to nie jest całe życie. Ponadto, nie były tak szczegółowe jak nasze badanie.
+			</td>
+		</tr>
+		<tr>
+			<td>
+			10 szczurów w grupie doświadczalnej to za mało
+			</td>
+			<td>
+				Wytyczne OECD, protokół 408
+				(90-dniowe testy toksyczności) – zalecają 10 zwierząt na grupę
+			<br/>
+				 Protokół 452 OECD
+				(testy toksyczności chronicznej) – zalecają 20 lub co najmniej 10 zwierząt w grupie
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Zbyt mała moc statystyczna testów, nie pokazano krzywych przeżycia Kaplana- Meiera
+			<br/>
+			</td>
+			<td>
+				Statystyka nie odkrywa prawdy, a jedynie pomaga zrozumieć badane zjawiska. Kluczem do zrozumienia problemu jest biologiczna interpretacja 					wyników i zastosowanie różnorodnych metod obliczeniowych.
+			<br/>
+			 	Nasze doświadczenia miały dostateczną moc statystyczną dla zastosowanej analizy metodą OPLS-DA., ale nie dla testu Kaplana-Meiera, dlatego 					pokazaliśmy tylko surowe dane doświadczalne dotyczące śmiertelności zwierząt. 
+			</td>
+		</tr>
+		<tr>
+			<td>
+			W publikacji brakuje danych (analizy zachowania zwierząt, badań oftalmologicznych, mikrobiologicznych kału, itp.)
+			</td>
+			<td>
+				Nie da się pokazać wszystkich danych w jednym artykule. Będą one przedmiotem osobnych publikacji. Dane, których brak podnoszą krytycy, nie 					mają związku z konkluzjami tej konkretnej pracy.
+			</td>
+		</tr>
+		</table>
+		<input type="button" class="game_button gmo_button" onclick="change_subpage($('#platform8'))" value="Next">
+		<input type="button" class="game_button gmo_button2" onclick="change_subpage($('#platform6'))" value="Previous">
+		</div>
+		<div id="platform8" class="subpage gmo">
+		<table class="gmo_table">
+		<tr>
+			<td>
+				Roundup nie wpływa na funkcje hormonów płciowych
+			</td>
+			<td>
+				Tak mówią obowiązujące dziś przepisy prawne, ale co innego mówią najnowsze eksperymenty naukowe. Wpływ Roundupu na zaburzenie wydzielania i 					sygnalizacji hormonów płciowych wykazano zarówno w doświadczeniach na zwierzętach jak i in vitro. Przepisy prawa (dotyczące klasyfikacji 					herbicydu) powinny zostać zmienione w zgodzie z aktualną wiedzą naukową.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Glifosat nie wykazywał toksyczności we wcześniejszych dwuletnich testach
+			</td>
+			<td>
+				Glifosat (substancja czynna herbicydu Roundup) nigdy nie jest stosowany samodzielnie, a tylko w mieszaninach z innymi substancjami. 					Mieszaniny te są znacznie bardziej toksyczne niż sam glifosat, W naszych doświadczeniach używaliśmy Roundupu (glifosat w 					mieszaninie innych związków, tzw. substancji pomocniczych). Dlatego wcześniejsze wyniki badań nad samym glifosatem nie mają 					odniesienia do naszych doświadczeń.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				W badaniach na zwierzętach hodowlanych nie wykazano szkodliwości GMO. Tak samo nie widać jej na populacji ludzkiej w USA
+			</td>
+			<td>
+				Nie ma żadnych badań epidemiologicznych ani długookresowych na zwierzętach gospodarskich. Generalnie, zwierzęta te zabija się zbyt 					wcześnie, aby zaobserwować pojawianie się u nich chorób o długim okresie rozwoju. W USA nie ma też obowiązku znakowania żywności GMO, nie 					da się więc wykonać badań epidemiologicznych na ludziach, nie ma dotąd takich badań.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Autorzy nie udostępnili szczegółowych danych eksperymentalnych
+			</td>
+			<td>
+				Szczegółowe dane eksperymentalne nie są także dostępne w odniesieniu do tych badań, na podstawie których dopuszczono na rynki kukurydzę 				NK603 i	Roundup. Autorzy oczekują, że te dane też zostaną udostępnione i poddane pod naukową dyskusję. 
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Wynik badań ujawniono dziennikarzom przed publikacją
+			</td>
+			<td>
+				Publikacja w czasopiśmie Food and Chemical Toxicology ukazała się w tym samym momencie, kiedy ujawniono wyniki badań dziennikarzom (19. 				września 2012)
+			</td>
+			</tr>
+			</table>
+		<input type="button" class="game_button gmo_button" onclick="change_subpage($('#platform9'))" value="Next">
+		<input type="button" class="game_button gmo_button2" onclick="change_subpage($('#platform7'))" value="Previous">
+		</div>
+	<div id="platform9" class="subpage gmo">
+		W obecnej chwili debata nad toksycznością kukurydzy NK603 i Roundupu jest utrudniona, ponieważ firma Monsnato utajniła i nie ujawnia wyników swoich testów 			toksykologicznych. Dlatego apelujemy do EFSA (European Food Safety Agency) aby ujawnić dane doświadczalne, na podstawie których dopuszczono te produkty do 			obrotu.
+
+		Aby wyjaśnić biologiczne skutki zmian biochemicznych, jakie obserwowano w 90-cio dniowych testach postanowiliśmy wydłużyć czas doświadczenia. Wybraliśmy 			kukurydzę NK603 odporną na Roundup, ponieważ około 80% upraw GMO na świecie to są właśnie rośliny odporne na Roundup (James, 2011) oraz dlatego, że już 		wcześniej obserwowano statystycznie znamienne różnice u zwierząt karmionych tą kukurydzą, i to w krótkotrwałych (90-cio dniowych) testach (EFSA, 2009).
+
+		Najczęstszy zarzut pod adresem naszej pracy dotyczył zgodności protokołu eksperymentalnego z wytycznymi OECD (Organization for Economic Co-operation and 			Development). W rzeczywistości, nie ma zatwierdzonych wytycznych dla badań bezpieczeństwa GMO, a co więcej, badania te wciąż nie są obowiązkowe. Nasz 			eksperyment był wykonany podobnie jak praca Hammond et al. (2004), w oparciu o wytyczne OECD (protokół 408 dotyczący testowania substancji chemicznych). 			Ulepszyliśmy dodatkowo nasz eksperyment, wydłużając czas trwania ośmiokrotnie; wykonaliśmy 11 analiz krwi i moczu, dla około 50 analizowanych parametrów, 			badaliśmy histologicznie 34, a nie 17 organów wewnętrznych. Badania Monsanto też były wykonane na grupach po 10 szczurów.
+		<br/>
+		Ciekawe, że nikt nie podnosił niedostatków metodycznych badań Monsanto, na podstawie których agencje kontrolne, zatwierdziły bezpieczeństwo zdrowotne 			różnych GMO. Artykuł przeglądowy (Snell et al., 2012) jest często przytaczany jako dowód na bezpieczeństwo długoterminowego spożywania GMO.  Jednakże 			spośród 24 doświadczeń, które analizowano w tej pracy, tylko 2 (dwuletnie badania na gryzoniach) są badaniami długoterminowymi; dwuletnie badania na 			świniach czy krowach nie są badaniami dotyczącymi wpływu GMO na całe życie, bo te zwierzęta żyją dłużej. Japońskie badanie na gryzoniach Sakamoto et al. 			(2008) nie analizowało stanu zdrowia wszystkich szczurów karmionych soją GMO, z kolei w pracy Malatesta et al. (2008a) u myszy karmionych tą samą soją 			obserwowano zmiany w wątrobie. Co więcej, w 16 z 24 omawianych badań autorzy nie piszą, że stosują jako kontrolną najbliżej spokrewnioną roślinę 			nie-transgeniczną, w wielu przypadkach metody są niewyczerpująco opisane, itp. (Snell et al., 2012). Mimo to, wszystkie te badania zostały zaakceptowane 			jako dowód bezpieczeństwa, niezależnie od swoich wad. Jak widać, mniejsze wymagania stawiane są badaniom, które stwierdzają bezpieczeństwo GMO niż badaniom 			wykazującym jego toksyczności. Mimo, że z naukowego punktu widzenia jest akurat odwrotnie: łatwiej jest wykazać toksyczność niż brak zagrożeń.
 	
-	
+		<input type="button" class="game_button gmo_button2" onclick="change_subpage($('#platform8'))" value="Previous">
+	</div>
 </body>
 
 </html>
-

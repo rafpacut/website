@@ -19,4 +19,5 @@ function show_about( jqueryObject )
 	$(jqueryObject).toggle();
 	$(".game1").toggle();
 	$(".game2").toggle();
+	$(".game_button").toggle();
 }

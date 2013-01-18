@@ -151,7 +151,7 @@ function OnClick( object, x, y )
 function atoms_Init()
 {
 	$("#atoms_board").text(".");//Ma pozwolic na rozpoczecie gry jeszcze raz.
-	$("#atoms_results").text(".");
+	$("#atoms_results").text(" ");
 	player='r';
 	green_il = 0;
 	red_il = 0;
