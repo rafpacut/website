@@ -27,6 +27,83 @@ input[type="button"]
 	border:1px solid #525252
 }
 
+.header
+{
+	top:13%;
+	font-size:40px;
+	font-weight:lighter;
+	margin-left:15%;
+	position:fixed;
+}
+
+.inside-menu-button
+{
+	width:90%;
+	align:center;
+}
+
+.text_output
+{
+	position:float;
+	display:none;
+	margin-bottom:16%;
+}
+
+.game_button
+{
+	position:fixed;
+	top:53%;
+	margin-left:20%;
+	width:15%;
+}
+
+.about
+{
+	padding-right: 60pt ;
+	padding-left:60px;
+	padding:top:20px;
+	padding-bottom:20px;
+	background:rgba(0,0,0,0.5);
+	color:ffffff;
+	display:none;
+	position: fixed;
+	top: 20%;
+	left:20%;
+	font-size:20px;
+}
+
+.open_about
+{
+	position:fixed;
+	top:60%;
+	left:20%;
+	width:15%;
+}
+
+.gmo_button
+{
+	top:80%;
+	left:30%;
+}
+.gmo_button2
+{
+	left:10%;
+	top:80%;
+}
+.gmo
+{
+	padding-right: 60pt ;
+	padding-left:60px;
+	padding:top:20px;
+	padding-bottom:20px;
+	font-size:20px;	
+	position:fixed;
+	color:ffffff;
+	background:rgba(0,0,0,0.5);
+	top:5%;
+	left:12%;
+}
+
 #menu_background
 {
 	position:fixed;
@@ -44,15 +121,6 @@ input[type="button"]
 	top:28%;
 }
 
-.header
-{
-	top:13%;
-	font-size:40px;
-	font-weight:lighter;
-	margin-left:15%;
-	position:fixed;
-}
-
 #szczegoly
 {
 	position:fixed;
@@ -67,12 +135,6 @@ input[type="button"]
 	position:fixed;
 	margin-left:22%;
 	top:50%;
-}
-
-.inside-menu-button
-{
-	width:90%;
-	align:center;
 }
 
 #dalsze
@@ -100,21 +162,6 @@ input[type="button"]
 	margin-left:45%;
 }
 
-.text_output
-{
-	position:float;
-	display:none;
-	margin-bottom:16%;
-}
-
-.game_button
-{
-	position:fixed;
-	top:53%;
-	margin-left:20%;
-	width:15%;
-}
-
 #atoms_board_background
 {
 	background:rgba(0,0,0,0.5);
@@ -133,40 +180,12 @@ input[type="button"]
 	font-size:45px;
 }
 
-.about
+#about_prs_img
 {
-	background:rgba(0,0,0,0.5);
-	color:ffffff;
-	display:none;
-	position: fixed;
-	top: 20%;
-	margin-left:20%;
-	font-size:28px;
+	height:100%;
+	width:100%;
+	overflow:auto;
+	overflow-x:auto;
+	overflow-y:auto;
 }
 
-.open_about
-{
-	position:fixed;
-	top:60%;
-	left:20%;
-	width:15%;
-}
-
-.gmo_button
-{
-	top:80%;
-	left:30%;
-}
-.gmo_button2
-{
-	left:10%;
-	top:80%;
-}
-.gmo
-{
-	position:fixed;
-	color:ffffff;
-	background:rgba(0,0,0,0.5);
-	top:5%;
-	left:12%;
-}

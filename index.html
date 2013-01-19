@@ -11,19 +11,18 @@
 </head>
 
 <body>
-	<!-- 00AEEF <- KOLOR!-->
 	<div id="menu_background">
 		<div id="menu">
 			<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform1'))" value="strona glowna" /><br/>
-			<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform2'))" value="prs " /><br/>
-			<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform3'))" value="atoms"/><br/>
+			<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform2'))" value="kamień..." /><br/>
+			<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform3'))" value="atomy"/><br/>
 			<input type="button" class="inside-menu-button" onclick="change_subpage($('#platform4'))"value="GMO" /><br/>
 		</div>
 	</div>
 	
 	
 	<div id="platform1" class="subpage">
-		<div class="header">Witojcie!</div>
+		<div class="header">Genetycznie Modyfikowane Organizmy</div>
 		<input type="button" id="menu-button" value="Menu" />
 	</div>
 	
@@ -31,15 +30,10 @@
 	
 	
 	<div id="platform2" class="subpage">
-		<div class="header">SUBPAGE2</div>
-		<input type="button" class="open_about" onclick="show_about('#about_prs')" value="Wiecej  o...">
+		<div class="header">Kamień papier nożyce!</div>
 		<input type="button" class="game_button" id="paper,rock,scissors button" onclick="prs_game_loop()" value="Graj!">
-		<div class="about" id="about_prs">
-			Kamień, papier, nożyce – skomplikowana i czasochłonna gra towarzyska, opierająca się na przeciwwadze trzech żywiołów. W dzisiejszych czasach gra jest najczęściej stosowana do: rozstrzygania wyników spotkań sportowych, wybierania prezydenta.<br/>
-			Istnieje uproszczona wersja tej gry, w której używa się tylko kamienia. Najczęściej gra się w to drużynowo na trybunach podczas meczów piłkarskich. Wówczas jedna z drużyn to policja, a druga – kibole. Ta pierwsza często korzysta z nieregulaminowych cheatów, dzięki czemu ma do dyspozycji gesty typu pała, pistolet na gumowe naboje i gaz łzawiący. Inna jej odmiana jest używana do przyjmowania porodów przez lekarzy.
-		</div>
 		<div id="comments" class="game1">
-			user's choice: </br></br>computer's choice: </br></br>result: </div>
+			twój wybór: </br></br>komputer: </br></br>wynik: </div>
 		<div id="results" class="game2">
 			<div id="prs_user_choice" class="text_output"></div>
 			<div id="prs_computer_choice" class="text_output"></div>
@@ -49,23 +43,23 @@
 	
 	
 	<div id="platform3" class="subpage">
-		<div class="header">SUBPAGE3</div>
+		<div class="header">Atomy</div>
 		<input type="button" class="open_about" onclick="show_about('#about_atoms')" value="Wiecej  o...">
 		<div class="about" id="about_atoms">
-		Atomy to gra planszowa gdzie atomki innych graczy sa przejmowane w rezultacie 
-		eksplozji atomow ( rozszczepienia ) spowodowanej przekroczeniem krytycznej    
-		masy atomowej. Eksplozja moze wywolac reakcje lancuchowa w wyniku ktorej   
-		atomy moga zmieniac wlasciciela wiele razy podczas jednej tury.<br/> Gra rozpoczyna
-		sie z pusta plansza. Co ture gracz moze stworzyc atom o masie 1, lub zwiekszyc
-		mase innego swojego atomu o 1. Krytyczna masa atomu jest zalezna od ilosci    
-		otaczajacych atom pol. Po rozszczepieniu atom rozpada sie na atomki o masie   
-		rownej atomowi na ktory wpadl plus jeden. Gracz ktory przejmie wszystkie atomy
-		na planszy wygrywa.
+		Atomy to gra planszowa gdzie atomki innych graczy są przejmowane w rezultacie 
+		eksplozji atomów ( rozszczepienia ) spowodowanej przekroczeniem krytycznej    
+		masy atomowej. Eksplozja może wywolać reakcję łańcuchową w wyniku której   
+		atomy mogą zmieniać właściciela wiele razy podczas jednej tury.<br/> Gra rozpoczyna
+		się z pustą planszą. Co turę gracz może stworzyć atom o masie 1, lub zwiekszyć
+		masę innego swojego atomu o 1. Krytyczna masa atomu jest zależna od ilości    
+		otaczajacych atom pól. Po rozszczepieniu atom rozpada się na atomki o masie   
+		równej atomowi na który nastąpiło rozszczepienie plus jeden. Gracz który przejmie wszystkie atomy
+		na planszy - wygrywa.
 		</div>
 		<div id="atoms_board_background">
 		<div id="atoms_board" class="game1"></div>
 		</div>
-		<input type="button" class="game_button" id="atoms_button" onclick="atoms_Init()" value="atoms!">
+		<input type="button" class="game_button" id="atoms_button" onclick="atoms_Init()" value="graj!">
 		<div id="atoms_results" class="game2"></div>
 	</div>
 	
@@ -91,7 +85,7 @@
 			<br/>
 			</p>
 			Opisane schorzenia można interpretować jako efekt zaburzeń hormonalnych wywołanych przez Roundup, a także jako skutek aktywności transgenu i 				wywołanych przez niego zmian w metabolizmie genetycznie zmodyfikowanej kukurydzy.
-			<input type="button" class="game_button gmo_button" onclick="change_subpage($('#platform5'))" value="Next">
+			<input type="button" class="game_button gmo_button" onclick="change_subpage($('#platform5'))" value="Następny">
 		</div>
 		<div id="platform5" class="subpage gmo">
 			Stanowisko Redakcji Food and Chemical Toxicology
@@ -103,16 +97,16 @@
 			Redakcja zachęca krytyków do nadsyłania swoich opinii, które zostaną opublikowane razem z odpowiedzią prof. Seraliniego.
 
 			Czasopismo Food and Chemical Toxicology (tłum.: “Toksykologia Żywności i Środków Chemicznych”) publikuje badania w takiej dziedzinie, w której 				łatwo o kontrowersje i ostre opinie pojawiające się zarówno w świecie naukowym jak i poza nim. Zachowanie niezależności wydawniczej z jednej strony 				i gęstego sita recenzji –  z drugiej strony, jest w tej sytuacji kluczowe dla naszego czasopisma.
-			<input type="button" class="game_button gmo_button" onclick="change_subpage($('#platform6'))" value="Next">
-			<input type="button" class="game_button gmo_button2" onclick="change_subpage($('#platform4'))" value="Previous">
+			<input type="button" class="game_button gmo_button" onclick="change_subpage($('#platform6'))" value="Następny">
+			<input type="button" class="game_button gmo_button2" onclick="change_subpage($('#platform4'))" value="Poprzedni">
 		</div>
 		<div id="platform6" class="subpage gmo">
 			Odpowiedź Seraliniego. Answers to critics: Why there is a long term toxicity due to NK603 Roundup-tolerant genetically modified maize and to a 				Roundup herbicide
 
 			Nasze ostatnie badania nad toksycznością długotrwałego stosowania kukurydzy NK603 i Roundupu wywołały liczne pozytywne i negatywne komentarze. 				Dzięki takiej debacie nauka posuwa się do przodu. Oto nasza odpowiedź na krytyczne uwagi. Nasza praca to pierwsze tak szczegółowe badanie 				długoterminowych skutków diety GMO. Dla kukurydzy NK603 wykonano dotąd tylko badania 90-ciodniowe. Jest to również pierwsze długoterminowe badanie 				reakcji organizmu ssaków na mocno rozcieńczoną domieszkę herbicydu Roundup. W naszych badaniach użyliśmy herbicydu, a nie tylko jego substancji 			czynnej (glifosat). Roundup jest najlepiej sprzedającym się herbicydem na świecie, dlatego obecna debata toczy się na skrzyżowaniu nauki i biznesu. 				To wyjaśnia, dlaczego większość krytycznych uwag pod naszym adresem pochodzi od naukowców zajmujących się ochroną roślin, autorów patentów na GMO i 				firmy Monsanto, właściciela kukurydzy NK603 i herbicydu Roundup.
 			Musimy się jednak skupić na nauce. Nasz eksperyment miał na celu badanie naukowe, a nie zmiany w przepisach dotyczących zasad dopuszczenia badanych 				produktów do obrotu. Nasze badania powinny zostać powtórzone przez innych, co pozwoli ocenić, jaki jest rzeczywisty wpływ tych produktów na 				zdrowie. Nasz eksperyment miał pewne ograniczenia, jak każdy inny eksperyment. Dalej szczegółowo omawiamy sporne kwestie.
-			<input type="button" class="game_button gmo_button" onclick="change_subpage($('#platform7'))" value="Next">
-			<input type="button" class="game_button gmo_button2" onclick="change_subpage($('#platform5'))" value="Previous">
+			<input type="button" class="game_button gmo_button" onclick="change_subpage($('#platform7'))" value="Następny">
+			<input type="button" class="game_button gmo_button2" onclick="change_subpage($('#platform5'))" value="Poprzedni">
 		</div>
 		<div id="platform7" class="subpage gmo">
 		<table class="gmo_table">
@@ -180,6 +174,12 @@
 				(testy toksyczności chronicznej) – zalecają 20 lub co najmniej 10 zwierząt w grupie
 			</td>
 		</tr>
+		</table>
+		<input type="button" class="game_button gmo_button" onclick="change_subpage($('#platform8'))" value="Następny">
+		<input type="button" class="game_button gmo_button2" onclick="change_subpage($('#platform6'))" value="Poprzedni">
+		</div>
+		<div id="platform8" class="subpage gmo">
+		<table class="gmo_table">
 		<tr>
 			<td>
 				Zbyt mała moc statystyczna testów, nie pokazano krzywych przeżycia Kaplana- Meiera
@@ -199,12 +199,6 @@
 				Nie da się pokazać wszystkich danych w jednym artykule. Będą one przedmiotem osobnych publikacji. Dane, których brak podnoszą krytycy, nie 					mają związku z konkluzjami tej konkretnej pracy.
 			</td>
 		</tr>
-		</table>
-		<input type="button" class="game_button gmo_button" onclick="change_subpage($('#platform8'))" value="Next">
-		<input type="button" class="game_button gmo_button2" onclick="change_subpage($('#platform6'))" value="Previous">
-		</div>
-		<div id="platform8" class="subpage gmo">
-		<table class="gmo_table">
 		<tr>
 			<td>
 				Roundup nie wpływa na funkcje hormonów płciowych
@@ -246,8 +240,8 @@
 			</td>
 			</tr>
 			</table>
-		<input type="button" class="game_button gmo_button" onclick="change_subpage($('#platform9'))" value="Next">
-		<input type="button" class="game_button gmo_button2" onclick="change_subpage($('#platform7'))" value="Previous">
+		<input type="button" class="game_button gmo_button" onclick="change_subpage($('#platform9'))" value="Następny">
+		<input type="button" class="game_button gmo_button2" onclick="change_subpage($('#platform7'))" value="Poprzedni">
 		</div>
 	<div id="platform9" class="subpage gmo">
 		W obecnej chwili debata nad toksycznością kukurydzy NK603 i Roundupu jest utrudniona, ponieważ firma Monsnato utajniła i nie ujawnia wyników swoich testów 			toksykologicznych. Dlatego apelujemy do EFSA (European Food Safety Agency) aby ujawnić dane doświadczalne, na podstawie których dopuszczono te produkty do 			obrotu.
@@ -258,7 +252,7 @@
 		<br/>
 		Ciekawe, że nikt nie podnosił niedostatków metodycznych badań Monsanto, na podstawie których agencje kontrolne, zatwierdziły bezpieczeństwo zdrowotne 			różnych GMO. Artykuł przeglądowy (Snell et al., 2012) jest często przytaczany jako dowód na bezpieczeństwo długoterminowego spożywania GMO.  Jednakże 			spośród 24 doświadczeń, które analizowano w tej pracy, tylko 2 (dwuletnie badania na gryzoniach) są badaniami długoterminowymi; dwuletnie badania na 			świniach czy krowach nie są badaniami dotyczącymi wpływu GMO na całe życie, bo te zwierzęta żyją dłużej. Japońskie badanie na gryzoniach Sakamoto et al. 			(2008) nie analizowało stanu zdrowia wszystkich szczurów karmionych soją GMO, z kolei w pracy Malatesta et al. (2008a) u myszy karmionych tą samą soją 			obserwowano zmiany w wątrobie. Co więcej, w 16 z 24 omawianych badań autorzy nie piszą, że stosują jako kontrolną najbliżej spokrewnioną roślinę 			nie-transgeniczną, w wielu przypadkach metody są niewyczerpująco opisane, itp. (Snell et al., 2012). Mimo to, wszystkie te badania zostały zaakceptowane 			jako dowód bezpieczeństwa, niezależnie od swoich wad. Jak widać, mniejsze wymagania stawiane są badaniom, które stwierdzają bezpieczeństwo GMO niż badaniom 			wykazującym jego toksyczności. Mimo, że z naukowego punktu widzenia jest akurat odwrotnie: łatwiej jest wykazać toksyczność niż brak zagrożeń.
 	
-		<input type="button" class="game_button gmo_button2" onclick="change_subpage($('#platform8'))" value="Previous">
+		<input type="button" class="game_button gmo_button2" onclick="change_subpage($('#platform8'))" value="Poprzedni">
 	</div>
 </body>
 

@@ -1,4 +1,3 @@
-//przetestuj koniec
 function compute_cc()
 {
 	var temp_cc = Math.random();
