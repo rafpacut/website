@@ -5,6 +5,11 @@ html
 	background-repeat:no-repeat;
 }
 
+@font-face 
+{
+	font-family: Dali; src: url('http://www.mediafont.com/storage/contents/4283/font.eot'); /* IE */ src: local('Dali'), url('http://www.mediafont.com/storage/	contents/4283/Dali.ttf'); /* non-IE */ 
+}
+
 .gmo_table td
 {
 	border: 1px;
@@ -29,6 +34,7 @@ input[type="button"]
 
 .header
 {
+	font-family: Dali;
 	top:13%;
 	font-size:40px;
 	font-weight:lighter;
