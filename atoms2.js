@@ -10,11 +10,12 @@ function field(x, y, atomsMax)
 
 	this.detonate = function()
 	{
-		console.log("detonating "+this.x+" "+this.y);
+		currentPlayer.fieldsOwned -= 1;
 		this.propagateDetonate(this.x+1,this.y);
 		this.propagateDetonate(this.x  ,this.y+1);
 		this.propagateDetonate(this.x-1,this.y);
 		this.propagateDetonate(this.x  ,this.y-1);
+
 	}
 
 	this.imageSrcBasePath = "graphics/atoms/";
@@ -31,9 +32,18 @@ function field(x, y, atomsMax)
 	}
 
 	this.changeOwner = function() {
-		if(this.owner != currentPlayer.color )
+		if(this.ownerColor !== currentPlayer.color ) {
+			currentPlayer.fieldsOwned +=1;
+			if( this.ownerColor == green.color )
+				green.fieldsOwned -= 1;
+			if( this.ownerColor == red.color )
+				red.fieldsOwned -= 1;
 
-		this.owner = currentPlayer.color;
+
+			if(gameOver())
+				declareWinner();
+			this.ownerColor = currentPlayer.color;
+		}
 	}
 
 
@@ -47,14 +57,14 @@ function field(x, y, atomsMax)
 		}
 		else
 		{
-			var newImageSrc = this.imageSrcBasePath + this.owner+ this.atomsNr+".jpg";
+			var newImageSrc = this.imageSrcBasePath + this.ownerColor+ this.atomsNr+".jpg";
 		}
 		this.image.src = newImageSrc;
 	}
 
 	this.x = x;
 	this.y = y;
-	this.owner = "neutral";
+	this.ownerColor = "neutral";
 	this.atomsNr = 0;
 	this.atomsMax = atomsMax;
 	this.image = this.getImgObj();
@@ -125,18 +135,33 @@ window.onload = init;
 function changePlayer()
 {
 	if(currentPlayer.color == "red")
-		currentPlayer.color = "green";
+		currentPlayer = green;
 	else
-		currentPlayer.color = "red";
+		currentPlayer = red;
+	roundNum+=1;
 }
 
 function onClick(obj, x, y)
 {
-	if( board.fields[x][y].owner == currentPlayer.color || board.fields[x][y].owner == "neutral")
+	if( board.fields[x][y].ownerColor == currentPlayer.color || board.fields[x][y].ownerColor == "neutral")
 	{
 		board.fields[x][y].clicked();
 		changePlayer();
 	}
 }
 
+function gameOver()
+{
+	return (red.fieldsOwned == 0 || green.fieldsOwned == 0) && !(red.fieldsOwned == 0 && green.fieldsOwned == 0) && (roundNum > 2);
+}
 
+function declareWinner()
+{
+	if(!winnerDeclared ) {
+		winnerDeclared = true;
+		alert(currentPlayer.color + ' won!');
+	}
+}
+
+roundNum = 0;
+winnerDeclared = false;
